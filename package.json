@@ -9,12 +9,15 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
-    "build": "father build",
-    "deploy": "npm run docs:build && npm run docs:deploy",
+    "build":"father build",
+    "build-utils": "cross-env NODE_ENV_PACKAGENAME=backgron-utils father build",
+    "build-ui": "cross-env NODE_ENV_PACKAGENAME=backgron-ui father build",
+    "deploy": "pnpm run docs:build && pnpm run docs:deploy",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build",
+    "preinstall": "npx only-allow pnpm"
   },
   "files": [
     "dist"
@@ -39,9 +42,11 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "^27.0.3",
+    "@types/node": "^18.7.18",
     "@types/react": "^18.0.20",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
+    "cross-env": "^7.0.3",
     "dumi": "^1.1.0",
     "father": "^4.0.0-rc.2",
     "gh-pages": "^3.0.0",

@@ -2,9 +2,11 @@
   "name": "backgron-utils",
   "version": "1.0.0",
   "description": "this is backgron-utils",
-  "main": "index.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"father build"
   },
   "keywords": [],
   "author": "",
