@@ -3,6 +3,10 @@ nav:
   title: 工具
   path: /utils
   order: 1
+group:
+  title: 示例
+  path: /example
+  order: 1
 ---
 
 ## Foo
