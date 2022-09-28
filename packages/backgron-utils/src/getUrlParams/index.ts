@@ -1,6 +1,4 @@
-interface anyObject {
-  [key: string]: string;
-}
+type anyObject = Record<string, unknown>;
 
 /**
  * @param key 参数的key | undefined

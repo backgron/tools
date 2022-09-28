@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-//@ts-ignore
 import { getUrlParams } from 'backgron-utils';
 
-export default () => {
-  const [state, setState] = useState('');
+const Demo = () => {
+  const [state, setState] = useState<any>('');
 
   return (
     <div>
@@ -19,3 +18,5 @@ export default () => {
     </div>
   );
 };
+
+export default Demo;
