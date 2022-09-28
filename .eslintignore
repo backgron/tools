@@ -8,3 +8,4 @@ build/
 .eslintrc.js
 commitlint.config.js
 package.json
+*.md

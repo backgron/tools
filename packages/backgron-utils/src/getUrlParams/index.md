@@ -12,10 +12,18 @@ group:
 
 ## getUrlParams
 
-获取url参数
+获取 url 参数
 
 ## Demo:
 
 <code src="./demo/demo.tsx"></code>
 
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
+## API
+
+```ts
+type anyObject = Record<string, unknown>
+
+const res: string | anyObject | undefined  = getUrlParams(key?:string)
+```
+
+说明：key 为 string 时，返回 url 对应的值；key 为 undefined 时，返回 url 参数对象；如果没有，则返回 undefined 或空对象
